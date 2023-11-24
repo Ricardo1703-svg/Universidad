@@ -31,9 +31,9 @@ def iniciar_sesion(request):
             if user is not None:
                 login(request, user)
                 return redirect('home') 
-            else:
-                form = LoginForm()
-            return render(request, 'login.html', {'form': form})
+    else:
+        form = LoginForm()
+        return render(request, 'login.html', {'form': form})
    
 def cerrar_sesion(request):
     logout(request)
