@@ -1,59 +1,21 @@
-/* static/estilos.css */
-
-/* Estilos para el botón del formulario */
-button {
-    background-color: #4caf50;
+/* styles.css */
+.button {
+    padding: 10px;
     color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.btn {
-    border: none;
-    color: white;
-    padding: 14px 28px;
-    cursor: pointer;
-    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
 }
 
-.primary {
-    background-color: #007bff;
+.button-registros {
+    background-color: #4CAF50;
 }
 
-.primary:hover {
-    background: #0b7dda;
+.button-inicio {
+    background-color: #008CBA;
 }
 
-.secondary {
-    background-color: #e7e7e7;
-    color: black;
-}
-
-.secondary:hover {
-    background: #ddd;
-}
-
-.success {
-    background-color: #04AA6D;
-}
-
-.success:hover {
-    background-color: #46a049;
-}
-
-.warning {
-    background-color: #ff9800;
-}
-
-.warning:hover {
-    background: #e68a00;
-}
-
-.danger {
+.button-logout {
     background-color: #f44336;
-}
-
-.danger:hover {
-    background: #da190b;
+    margin-top: 10px;
 }

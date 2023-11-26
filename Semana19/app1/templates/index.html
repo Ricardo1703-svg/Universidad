@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'path/to/estilos.css' %}">
     <title>Document</title>
 </head>
 <body>
-    {% if es_estudiante or es_admin%}
+    {% if es_estudiante or es_admin %}
         <h1>Bienvenido {{ user.username }} al área de Estudiantes</h1>
-        <a href="http://127.0.0.1:8000/registro/">Registros</a>
-        <a href="http://127.0.0.1:8000/">Inicio</a>
-        
+        <a href="http://127.0.0.1:8000/registro/" class="button button-registros">Registros</a>
+        <a href="http://127.0.0.1:8000/" class="button button-inicio">Inicio</a>
     {% else %}
         <h1>No tienes permisos para acceder a esta página</h1>
     {% endif %}
-    <a href="{% url 'logout' %}">Cerrar sesión</a>
+    <a href="{% url 'logout' %}" class="button button-logout">Cerrar sesión</a>
 </body>
 </html>
