@@ -1,8 +1,40 @@
-<!-- templates/agregar_producto.html -->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Agregar Producto</title>
+    <title>Agregar Proveedor</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
+    <style>
+        body {
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgb(221, 102, 201);
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            background-color: #008CBA;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>Agregar Producto</h1>

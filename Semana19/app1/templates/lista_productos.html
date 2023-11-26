@@ -1,15 +1,61 @@
-<!-- templates/lista_productos.html -->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lista de Productos</title>
+    <title>Lista de Proveedores</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
+    <style>
+        .container {
+            text-align: center;
+            max-width: 300px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #a2ca46;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .button-regresar,
+        .button-agregar {
+            display: inline-block;
+            padding: 10px 20px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .button-regresar {
+            background-color: #008CBA;
+        }
+
+        .button-agregar {
+            background-color: #02FF9F;
+        }
+    </style>
 </head>
 <body>
-    <h1>Lista de Productos</h1>
+    <div class="container">
+        <h1>Lista de Productos</h1>
     <ul>
         {% for producto in productos %}
             <li>{{ producto.nombre }} - {{ producto.precio }} - {{ producto.stock }}</li>
         {% endfor %}
     </ul>
+        <a href="http://127.0.0.1:8000/" class="button-regresar">Regresar</a>
+        <a href="http://127.0.0.1:8000/agregar_producto/" class="button-agregar">Agregar Productos</a>
+    </div>
 </body>
 </html>
