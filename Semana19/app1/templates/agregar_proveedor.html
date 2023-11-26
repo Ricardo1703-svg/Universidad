@@ -1,12 +1,44 @@
-<!-- templates/agregar_proveedor.html -->
 <!DOCTYPE html>
 <html>
 <head>
     <title>Agregar Proveedor</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
+    <style>
+        body {
+            text-align: center;
+            background-color: #f8f8f8; /* Color de fondo de la página */
+        }
+
+        h1 {
+            color: #333; /* Color del texto */
+        }
+
+        form {
+            max-width: 600px; /* ajusta según sea necesario */
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgb(233, 173, 173); /* Color de fondo del formulario */
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            background-color: #008CBA;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>Agregar Proveedor</h1>
     <form method="post" action="">
+        <h1>Agregar Proveedor</h1>
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Guardar</button>
