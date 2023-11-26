@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app1 import views as ap1v
+from django.urls import path
+from app1.views import lista_proveedores, agregar_proveedor
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
