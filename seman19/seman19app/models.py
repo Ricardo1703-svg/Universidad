@@ -16,9 +16,6 @@ class Productos(models.Model):
     
     def __str__(self):
         return self.nombre
-    
 
-Group.objects.get_or_create(name='Cajero')
-Group.objects.get_or_create(name='Estudiante')
 
 # Create your models here.
