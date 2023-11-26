@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'seman19.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sem19sem',
-        'USER': 'postgres',
-        'PASSWORD': 'GuevaraVasq',
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': 5432,
+        'NAME': 'DjaEdvin',
+        'USER': 'postgres',
+        'PASSWORD': 'Alvares17',
     }
 }
 
