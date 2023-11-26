@@ -24,4 +24,6 @@ urlpatterns = [
     path('login/', ap1v.iniciar_sesion,name="login"),
     path('logout/', ap1v.cerrar_sesion, name='logout'),
     path('registro/', ap1v.reg_user),
+    path('proveedores/', lista_proveedores, name='lista_proveedores'),
+    path('agregar_proveedor/', agregar_proveedor, name='agregar_proveedor'),
 ]

@@ -22,8 +22,6 @@ def reg_user(request):
         formulario = NewUserForm()
         return render(request, "Reg_user.html", {"form": formulario})
 
-
-
 def index(request):
     return render(request, 'index.html')
 
@@ -40,6 +38,26 @@ def iniciar_sesion(request):
     else:
         form = LoginForm()
         return render(request, 'login.html', {'form': form})
+    
+
+
+def lista_proveedores(request):
+    proveedores = Proveedores.objects.all()
+    return render(request, 'lista_proveedores.html', {'proveedores': proveedores})
+
+# app1/views.py
+from .forms import ProveedorForm
+
+def agregar_proveedor(request):
+    if request.method == 'POST':
+        form = ProveedorForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_proveedores')
+    else:
+        form = ProveedorForm()
+    return render(request, 'agregar_proveedor.html', {'form': form})
+
    
 def cerrar_sesion(request):
     logout(request)

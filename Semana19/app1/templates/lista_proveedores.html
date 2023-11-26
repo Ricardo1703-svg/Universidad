@@ -1,0 +1,15 @@
+<!-- templates/lista_proveedores.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Proveedores</title>
+</head>
+<body>
+    <h1>Lista de Proveedores</h1>
+    <ul>
+        {% for proveedor in proveedores %}
+            <li>{{ proveedor.nombre }} - {{ proveedor.direccion }} - {{ proveedor.telefono }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!-- templates/agregar_proveedor.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Proveedor</title>
+</head>
+<body>
+    <h1>Agregar Proveedor</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>
