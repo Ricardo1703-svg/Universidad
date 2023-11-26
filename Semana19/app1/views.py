@@ -7,15 +7,21 @@ from .models import Productos,Proveedores
 from django.contrib.auth import authenticate, login,logout
 from django.contrib.auth.decorators import login_required
 
+from django.shortcuts import render, HttpResponseRedirect
+from .formularios.registerform import NewUserForm
+
 def reg_user(request):
     if request.method == "POST":
         formulario = NewUserForm(request.POST)
         if formulario.is_valid():
             formulario.save()
             return HttpResponseRedirect("/")
+        else:
+            return render(request, "Reg_user.html", {"form": formulario})
     else:
         formulario = NewUserForm()
         return render(request, "Reg_user.html", {"form": formulario})
+
 
 
 def index(request):
