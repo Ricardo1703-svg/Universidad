@@ -3,10 +3,11 @@
 <html>
 <head>
     <title>Lista de Proveedores</title>
+    {% load static %}  <!-- Agrega esta línea para cargar las etiquetas estáticas -->
+    <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
 </head>
 <body>
     <h1>Lista de Proveedores</h1>
-    <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
     <ul>
         {% for proveedor in proveedores %}
             <li>{{ proveedor.nombre }} - {{ proveedor.direccion }} - {{ proveedor.telefono }}</li>
