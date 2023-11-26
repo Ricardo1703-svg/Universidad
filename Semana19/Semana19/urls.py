@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from app1 import views as ap1v
 from django.urls import path
-from app1.views import lista_proveedores, agregar_proveedor
+from app1.views import lista_proveedores, agregar_proveedor,lista_productos, agregar_producto
 
 
 urlpatterns = [
@@ -29,4 +29,6 @@ urlpatterns = [
     path('registro/', ap1v.reg_user),
     path('proveedores/', lista_proveedores, name='lista_proveedores'),
     path('agregar_proveedor/', agregar_proveedor, name='agregar_proveedor'),
+    path('productos/', lista_productos, name='lista_productos'),
+    path('agregar_producto/', agregar_producto, name='agregar_producto'),
 ]

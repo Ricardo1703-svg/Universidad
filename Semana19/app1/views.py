@@ -10,6 +10,42 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, HttpResponseRedirect
 from .formularios.registerform import NewUserForm
 
+#--------------------------Productos-------------------------------------------------------
+def lista_productos(request):
+    productos = Productos.objects.all()
+    return render(request, 'lista_productos.html', {'productos': productos})
+
+# app1/views.py
+from .forms import ProductoForm
+def agregar_producto(request):
+    if request.method == 'POST':
+        form = ProductoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_productos')
+    else:
+        form = ProductoForm()
+    return render(request, 'agregar_producto.html', {'form': form})
+#---------------------------------------------------------------------------------------
+
+#--------------------------Proveedor-------------------------------------------------------
+def lista_proveedores(request):
+    proveedores = Proveedores.objects.all()
+    return render(request, 'lista_proveedores.html', {'proveedores': proveedores})
+
+from .forms import ProveedorForm
+
+def agregar_proveedor(request):
+    if request.method == 'POST':
+        form = ProveedorForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('lista_proveedores')
+    else:
+        form = ProveedorForm()
+    return render(request, 'agregar_proveedor.html', {'form': form})
+#------------------------------------------------------------------------------------------
+
 def reg_user(request):
     if request.method == "POST":
         formulario = NewUserForm(request.POST)
@@ -38,27 +74,7 @@ def iniciar_sesion(request):
     else:
         form = LoginForm()
         return render(request, 'login.html', {'form': form})
-    
 
-
-def lista_proveedores(request):
-    proveedores = Proveedores.objects.all()
-    return render(request, 'lista_proveedores.html', {'proveedores': proveedores})
-
-# app1/views.py
-from .forms import ProveedorForm
-
-def agregar_proveedor(request):
-    if request.method == 'POST':
-        form = ProveedorForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('lista_proveedores')
-    else:
-        form = ProveedorForm()
-    return render(request, 'agregar_proveedor.html', {'form': form})
-
-   
 def cerrar_sesion(request):
     logout(request)
     return redirect('login')
