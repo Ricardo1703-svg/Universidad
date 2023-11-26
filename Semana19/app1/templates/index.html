@@ -8,6 +8,11 @@
 <body>
     {% if es_estudiante or es_admin%}
         <h1>Bienvenido {{ user.username }} al área de Estudiantes</h1>
+        <a href="http://127.0.0.1:8000/">
+        <button>Inicio</button>
+
+
+        
     {% else %}
         <h1>No tienes permisos para acceder a esta página</h1>
     {% endif %}
