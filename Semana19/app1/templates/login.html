@@ -1,11 +1,47 @@
-<!-- templates/login.html -->
-{% load static %}
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Principal</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'estilos.css' %}">
+    {% load static %}
+    <style>
+        body {
+            background-image: url("{% static 'Semana19/Imgenes/Fondo.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Establece el 100% de la altura de la ventana de visualización */
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente blanco para el formulario */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .mi-formulario {
+            text-align: center;
+        }
+
+        .btn-block {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <form method="post" action="{% url 'login' %}" class="mi-formulario">
