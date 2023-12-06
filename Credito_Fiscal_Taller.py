@@ -11,7 +11,9 @@ def calcular_factura():
     iva = precio_factura * 0.13
     total = precio_factura + iva
 
-    resultado_label.config(text=f"Total: ${round(total, 2)}")
+    precio_factura_label.config(text=f"Sumas: ${round(precio_factura, 2)}")
+    iva_label.config(text=f"13% IVA: ${round(iva, 2)}")
+    resultado_label.config(text=f"Venta Total: ${round(total, 3)}")    
 
 # Crear la ventana principal
 root = tk.Tk()
@@ -34,7 +36,9 @@ cantidad_entry = ttk.Entry(root, textvariable=cantidad_var)
 
 calcular_button = ttk.Button(root, text="Calcular", command=calcular_factura)
 
-resultado_label = ttk.Label(root, text="Total: $0.00", font=("Helvetica", 14, "bold"))
+precio_factura_label = ttk.Label(root, text="Sumas: $0.00", font=("Helvetica", 12, "bold"))
+iva_label = ttk.Label(root, text="13% IVA: $0.00", font=("Helvetica", 12, "bold"))
+resultado_label = ttk.Label(root, text="Venta Total: $0.00", font=("Helvetica", 14, "bold"))
 
 # Organizar widgets en la ventana
 producto_label.grid(row=0, column=0, padx=10, pady=10, sticky="e")
@@ -48,7 +52,10 @@ cantidad_entry.grid(row=2, column=1, padx=10, pady=10)
 
 calcular_button.grid(row=3, column=0, columnspan=2, pady=10)
 
-resultado_label.grid(row=4, column=0, columnspan=2, pady=10)
+precio_factura_label.grid(row=4, column=0, columnspan=2, pady=5)
+iva_label.grid(row=5, column=0, columnspan=2, pady=5)
+resultado_label.grid(row=6, column=0, columnspan=2, pady=10)
+
 
 # Iniciar el bucle principal de la interfaz gráfica
 root.mainloop()
