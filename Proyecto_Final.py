@@ -99,4 +99,3 @@ resultados.configure(bg="#D3D3D3")
 
 # Iniciar el bucle principal de Tkinter
 root.mainloop()
-
