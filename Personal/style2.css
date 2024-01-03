@@ -47,7 +47,7 @@ header img{
 
 nav{
 	grid-area: nav;
-	background-color: #db298b;
+	background-color: red;
 }
 
 nav ul{
@@ -195,13 +195,19 @@ img:hover{
 }
 
 h1{
-	font-size: 4rem;
-	color: turquoise;
+	font-size: 2.5rem;
+	color: white;
+}
+
+h5{
+	font-size: 1.5rem;
+	color: white;
 }
 
 h3{
 	font-size: 2.5rem;
-	color: #db298b;
+	color: white;
+    place-items: center;
 }
 
 h4{

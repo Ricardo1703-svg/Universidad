@@ -65,7 +65,7 @@ nav li:hover{
 nav a{
 	text-decoration: none;
 	font-weight: bold;
-	color: magenta;
+	color: blue;
 }
 
 nav li:first-of-type, nav li:nth-child(2){
@@ -118,7 +118,7 @@ header, article, #edu, #exp, #skills, #hobbies, footer{
 
 footer{
 	grid-area: footer;
-	background-image: linear-gradient(to right, magenta, purple);
+	background-image: linear-gradient(to right, blue, purple);
 	display: grid;
 	place-items: center;
 	text-align: center;
@@ -136,7 +136,7 @@ footer a, #info a{
 
 article{
 	display: flex;
-	background-image: linear-gradient(to right, magenta, purple);
+	background-image: linear-gradient(to right, blue, purple);
 	margin: 1.5rem 0;
 	border-radius: 0.5rem;
 }
@@ -188,7 +188,7 @@ h1{
 
 h3{
 	font-size: 2.5rem;
-	color: magenta;
+	color: blue;
 }
 
 h4{
