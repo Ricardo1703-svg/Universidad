@@ -94,7 +94,7 @@ h1, h3, h4, nav, #periodo, #titulo{
 #info{
 	grid-area: info;
 	padding: 2rem;
-	background-color: #353c3c;
+	background-color: #000000;
 	color: white;
 }
 
@@ -124,7 +124,7 @@ h1, h3, h4, nav, #periodo, #titulo{
 
 footer{
 	grid-area: footer;
-	background-color: #db298b;
+	background-color: #fc0909;
 	display: grid;
 	place-items: center;
 	text-align: center;
@@ -147,7 +147,7 @@ footer a:hover, #info a:hover{
 
 article{
 	display: flex;
-	background-color: #db298b;
+	background-color: #000000;
 	margin: 1.5rem 0;
 	box-shadow: 0px 3px 20px grey;
 }
@@ -172,12 +172,12 @@ article{
 }
 
 .periodo{
-	color: black;
+	color: rgb(245, 233, 233);
 }
 
 .titulo{
 	font-weight: bold;
-	color: black;
+	color: rgb(233, 227, 227);
 }
 
 .descripcion{
@@ -220,7 +220,7 @@ p, #info ul, nav ul{
 }
 
 hr{
-	border: 1px solid #db298b;
+	border: 1px solid #db4429;
 }
 
 .parallax{
